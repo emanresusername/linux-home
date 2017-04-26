@@ -1,0 +1,12 @@
+antigen bundles <<EOF
+command-not-found
+gitfast
+history
+history-substring-search
+zsh_reload
+autojump
+zsh-users/zsh-syntax-highlighting
+emacs
+EOF
+
+antigen theme bhilburn/powerlevel9k powerlevel9k

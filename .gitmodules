@@ -1,0 +1,13 @@
+[submodule ".ammonite"]
+	path = .ammonite
+	url = git@github.com:emanresusername/.ammonite.git
+[submodule ".sbt"]
+	path = .sbt
+	url = git@github.com:emanresusername/.sbt.git
+[submodule "electron-chrome"]
+	path = electron-chrome
+	url = git@github.com:koush/electron-chrome.git
+[submodule "spacemacs"]
+	path = .emacs.d
+	url = git@github.com:syl20bnr/spacemacs.git
+	branch = develop
