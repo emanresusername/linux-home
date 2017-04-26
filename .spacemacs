@@ -286,8 +286,7 @@ values."
                                          markdown-mode
                                          org-mode
                                          pdf-view-mode
-                                         text-mode
-                                         :size-limit-kb 1000) 
+                                         :size-limit-kb 1000)
    ;; Code folding method. Possible values are `evil' and `origami'.
    ;; (default 'evil)
    dotspacemacs-folding-method 'evil
