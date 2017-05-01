@@ -353,10 +353,11 @@ you should place your code here."
       (setq clipmon-transform-suffix "
 ")))
 
-  (global-company-mode)
+  (add-to-list 'auto-mode-alist '("Brewfile\\'" . ruby-mode))
+  (add-to-list 'auto-mode-alist '("antigenrc\\'" . ruby-mode))
+  (add-to-list 'auto-mode-alist '("\\.sc\\'" . scala-mode))
 
-  (use-package scala-mode
-    :mode "\\.sc\\'")
+  (global-company-mode)
 
   ;; can hit f+d in any order/at the same time to esc
   (setq evil-escape-unordered-key-sequence t)

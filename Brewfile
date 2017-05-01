@@ -15,7 +15,7 @@ brew 'aria2'
 brew 'bzip2'
 brew 'gdbm'
 brew 'ncurses'
-brew 'python'
+brew 'python', args: ['with-tcl-tk']
 brew 'pkg-config'
 brew 'autojump'
 brew 'pcre'
@@ -30,7 +30,7 @@ brew 'iotop'
 brew 'lastpass-cli'
 brew 'libpcap'
 brew 'lsof'
-brew 'python3'
+brew 'python3', args: ['with-tcl-tk']
 brew 'protobuf', args: ['without-python']
 brew 'mobile-shell'
 brew 'mongodb', args: ['without-openssl']
