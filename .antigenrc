@@ -8,6 +8,7 @@ autojump
 zsh-users/zsh-syntax-highlighting
 emacs
 thefuck
+emanresusername/oh-my-zsh plugins/pasteboard
 EOF
 
 antigen theme bhilburn/powerlevel9k powerlevel9k
