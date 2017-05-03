@@ -31,7 +31,6 @@ brew 'lastpass-cli'
 brew 'libpcap'
 brew 'lsof'
 brew 'python3', args: ['with-tcl-tk']
-brew 'protobuf', args: ['without-python']
 brew 'mobile-shell'
 brew 'mongodb', args: ['without-openssl']
 brew 'mysql'
@@ -41,6 +40,7 @@ brew 'openssh'
 brew 'parallel'
 brew 'patchelf', args: ['with-static']
 brew 'pigz'
+brew 'privoxy'
 brew 'ripgrep'
 brew 'sbt'
 brew 'scala'
