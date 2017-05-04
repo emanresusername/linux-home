@@ -359,9 +359,6 @@ you should place your code here."
   (add-to-list 'auto-mode-alist '("\\.sc\\'" . scala-mode))
 
   (global-company-mode)
-
-  ;; can hit f+d in any order/at the same time to esc
-  (setq evil-escape-unordered-key-sequence t)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
