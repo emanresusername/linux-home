@@ -9,6 +9,7 @@ zsh-users/zsh-syntax-highlighting
 emacs
 thefuck
 emanresusername/oh-my-zsh plugins/pasteboard
+fcambus/ansiweather
 EOF
 
 antigen theme bhilburn/powerlevel9k powerlevel9k
