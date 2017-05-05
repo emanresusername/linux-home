@@ -1,4 +1,4 @@
-source $HOME/.linuxbrew/share/antigen/antigen.zsh
+source $BREW_PREFIX/share/antigen/antigen.zsh
 
 setopt HIST_IGNORE_SPACE
 
