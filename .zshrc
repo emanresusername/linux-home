@@ -13,3 +13,5 @@ antigen init $HOME/.antigenrc
 antigen apply
 
 alias ytdl='youtube-dl --external-downloader aria2c --external-downloader-args "-c -j 5 -x 3 -s 3 -k 1M"'
+
+alias pip3freeze='pip3 list --not-required --user --format freeze'
