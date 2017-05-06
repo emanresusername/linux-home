@@ -11,3 +11,6 @@
 	path = .emacs.d
 	url = git@github.com:syl20bnr/spacemacs.git
 	branch = develop
+[submodule "cowsay-files"]
+	path = cowsay-files
+	url = git@github.com:paulkaefer/cowsay-files.git

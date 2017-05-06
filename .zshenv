@@ -3,4 +3,6 @@ export PATH="$BREW_PREFIX/sbin:$BREW_PREFIX/bin:$PATH"
 export MANPATH="$BREW_PREFIX/share/man:$MANPATH"
 export INFOPATH="$BREW_PREFIX/share/info:$INFOPATH"
 export XDG_DATA_DIRS="$BREW_PREFIX/share:$XDG_DATA_DIRS"
+export COWPATH=`brew --prefix`/share/cows:$HOME/cowsay-files/cows
+
 . `which env_parallel.zsh`
