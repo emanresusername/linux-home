@@ -1,4 +1,5 @@
 howdoi==1.1.9
+http-prompt==0.10.0
 mitmproxy==2.0.2
 PyAutoGUI==0.9.36
 thefuck==3.16
