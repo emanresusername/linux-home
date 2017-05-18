@@ -14,7 +14,6 @@ brew "zlib"
 brew "openssl"
 brew "aria2"
 brew "bzip2"
-brew "gdbm"
 brew "ncurses"
 brew "python", args: ["with-tcl-tk"]
 brew "pkg-config"
@@ -44,6 +43,7 @@ brew "openssh"
 brew "parallel"
 brew "patchelf", args: ["with-static"]
 brew "pigz"
+brew "postgresql", args: ["without-perl"]
 brew "privoxy"
 brew "redis"
 brew "ripgrep"
