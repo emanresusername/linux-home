@@ -11,3 +11,4 @@
 !/Brewfile
 !/requirements.txt
 !/.ansiweatherrc
+!/youtube-dl.conf
