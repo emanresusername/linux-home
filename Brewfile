@@ -39,7 +39,6 @@ brew "mongodb", args: ["without-openssl"]
 brew "mysql"
 brew "nethogs"
 brew "node"
-brew "openssh"
 brew "parallel"
 brew "patchelf", args: ["with-static"]
 brew "pigz"
