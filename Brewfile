@@ -35,7 +35,7 @@ brew "libpcap"
 brew "lsof"
 brew "python3", args: ["with-tcl-tk"]
 brew "mobile-shell"
-brew "mongodb", args: ["without-openssl"]
+brew "mongodb"
 brew "mysql"
 brew "nethogs"
 brew "node"
