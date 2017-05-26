@@ -44,6 +44,7 @@ brew "patchelf", args: ["with-static"]
 brew "pigz"
 brew "postgresql", args: ["without-perl"]
 brew "privoxy"
+brew "pv"
 brew "redis"
 brew "ripgrep"
 brew "s3cmd"
