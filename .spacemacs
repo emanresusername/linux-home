@@ -378,6 +378,7 @@ This function is called at the very end of Spacemacs initialization."
  ;; If there is more than one, they won't work right.
  '(evil-want-Y-yank-to-eol t)
  '(magit-branch-arguments nil)
+ '(magit-diff-refine-hunk t)
  '(magit-diff-arguments
    (quote
     ("--ignore-space-change" "--no-ext-diff" "--stat" "-M" "-C")))
