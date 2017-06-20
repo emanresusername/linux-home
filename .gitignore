@@ -2,13 +2,9 @@
 
 !/.gitignore
 !/.spacemacs
-!/.antigenrc
 !/.tmux.conf
-!/.zshenv
 !/.zshrc
 !/.zlogin
 !/.zlogout
-!/Brewfile
-!/requirements.txt
 !/.ansiweatherrc
-!/youtube-dl.conf
+!/brew/

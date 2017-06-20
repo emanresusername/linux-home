@@ -361,6 +361,10 @@ you should place your code here."
   (add-to-list 'auto-mode-alist '("antigenrc\\'" . ruby-mode))
   (add-to-list 'auto-mode-alist '("\\.sc\\'" . scala-mode))
 
+  (setq org-export-with-author nil)
+  (setq org-export-with-timestamps nil) ;; TODO: seems to be ignored
+  (setq org-export-with-properties t)
+
   (global-company-mode)
   )
 

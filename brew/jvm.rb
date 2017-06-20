@@ -1,0 +1,5 @@
+brew "jdk"
+brew "scala"
+brew "sbt"
+brew "ammonite-repl"
+brew "android-platform-tools"

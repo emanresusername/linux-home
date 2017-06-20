@@ -1,15 +1,100 @@
-source $BREW_PREFIX/share/antigen/antigen.zsh
+export ZPLUG_HOME=$HOME/.zplug
+local zplug_init=$ZPLUG_HOME/init.zsh
+if [ ! -f "$zplug_init" ] &> /dev/null; then
+    curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh| zsh
+fi
+source $zplug_init
 
-setopt HIST_IGNORE_SPACE
+zplug "plugins/zsh_reload", from:oh-my-zsh
+zplug "plugins/emacs", from:oh-my-zsh
+zplug "plugins/gitfast", from:oh-my-zsh
+zplug "plugins/command-not-found", from:oh-my-zsh
+zplug "emanresusername/zsh-plugins", use:electron-chrome
+zplug "emanresusername/zsh-plugins", use:cowfiles
 
-export _ANTIGEN_CACHE_ENABLED=true
+zplug "marzocchi/zsh-notify", \
+      use:"notify.plugin.zsh", \
+      hook-build:"sudo apt install -y wmctrl && sudo apt install -y xdotool"
+zstyle ':notify:*' command-complete-timeout 2
 
-POWERLEVEL9K_INSTALLATION_PATH=$ANTIGEN_BUNDLES/bhilburn/powerlevel9k
+zplug "MichaelAquilina/zsh-emojis"
 
-antigen use oh-my-zsh
+zplug "wting/autojump", use:"bin/autojump.zsh"
 
-antigen init $HOME/.antigenrc
+zplug "emanresusername/zsh-plugins", \
+      use:youtube-dl-aria2
 
-antigen apply
+zplug "BurntSushi/ripgrep", \
+      from:gh-r, \
+      as:command, \
+      rename-to:rg
 
-alias pip3freeze='pip3 list --not-required --user --format freeze'
+zplug "junegunn/fzf-bin", \
+      from:gh-r, \
+      as:command, \
+      rename-to:fzf, \
+      on:"BurntSushi/ripgrep"
+export FZF_DEFAULT_COMMAND='rg --files'
+zplug "junegunn/fzf", \
+      as:command, \
+      use:"bin/fzf-tmux", \
+      on:"junegunn/fzf-bin"
+
+zplug "b4b4r07/enhancd", \
+      use:init.sh, \
+      on:"junegunn/fzf-bin"
+
+zplug "lib/clipboard", from:oh-my-zsh
+zplug "lib/history", from:oh-my-zsh
+
+zplug "zsh-users/zsh-autosuggestions"
+zplug "zsh-users/zsh-syntax-highlighting", defer:2
+zplug "zsh-users/zsh-history-substring-search", \
+      on:"zsh-users/zsh-syntax-highlighting", \
+      defer:2, \
+      hook-load:"
+      bindkey -M emacs '^P' history-substring-search-up;
+      bindkey -M emacs '^N' history-substring-search-down;
+      bindkey '^[[A' history-substring-search-up;
+      bindkey '^[[B' history-substring-search-down;
+      bindkey -M vicmd 'k' history-substring-search-up;
+      bindkey -M vicmd 'j' history-substring-search-down;
+"
+zplug "stedolan/jq", \
+      from:gh-r, \
+      as:command, \
+      rename-to:jq
+
+zplug "fcambus/ansiweather", \
+      on:"stedolan/jq"
+
+zplug "zpm-zsh/linuxbrew"
+
+POWERLEVEL9K_INSTALLATION_PATH=$ZPLUG_REPOS/bhilburn/powerlevel9k
+zplug "bhilburn/powerlevel9k", \
+      use:powerlevel9k.zsh-theme, \
+      hook-build:"sudo apt install -y fonts-powerline"
+
+# tmux
+zplug "jreese/zsh-titles"
+zplug "TBSliver/zsh-plugin-tmux-simple"
+
+zplug 'zplug/zplug', hook-build:'zplug --self-manage'
+
+# Install plugins if there are plugins that have not been installed
+if ! zplug check --verbose; then
+    printf "Install? [y/N]: "
+    if read -q; then
+        oldpwd=$ZPLUG_SUDO_PASSWORD
+        printf "\nzplug sudo password? "
+        read -s ZPLUG_SUDO_PASSWORD
+        echo; zplug install
+        export ZPLUG_SUDO_PASSWORD=$oldpwd
+    fi
+fi
+
+# Then, source plugins and add commands to $PATH
+zplug load --verbose
+
+# https://stackoverflow.com/a/257666
+alias sudo="sudo env PATH=$PATH"
