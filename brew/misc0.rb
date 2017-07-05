@@ -1,6 +1,0 @@
-brew "parallel"
-brew "tmux"
-brew "xclip"
-brew "curl"
-brew "git"
-brew "lastpass-cli"
