@@ -14,7 +14,7 @@ zplug "emanresusername/zsh-plugins", use:cowfiles
 
 zplug "marzocchi/zsh-notify", \
       use:"notify.plugin.zsh", \
-      hook-build:"sudo apt install -y wmctrl && sudo apt install -y xdotool"
+      hook-build:"brew install wmctrl xdotool"
 zstyle ':notify:*' command-complete-timeout 2
 
 zplug "MichaelAquilina/zsh-emojis"
@@ -27,7 +27,8 @@ zplug "emanresusername/zsh-plugins", \
 zplug "BurntSushi/ripgrep", \
       from:gh-r, \
       as:command, \
-      rename-to:rg
+      rename-to:rg, \
+      at:"0.5.2" # TODO: latest windows release breaks
 
 zplug "junegunn/fzf-bin", \
       from:gh-r, \
