@@ -5,11 +5,13 @@ if [ ! -f "$zplug_init" ] &> /dev/null; then
 fi
 source $zplug_init
 
+zplug "plugins/thefuck", from:oh-my-zsh
 zplug "plugins/zsh_reload", from:oh-my-zsh
 zplug "plugins/emacs", from:oh-my-zsh
 zplug "plugins/gitfast", from:oh-my-zsh
 zplug "plugins/command-not-found", from:oh-my-zsh
 zplug "emanresusername/zsh-plugins", use:electron-chrome
+zplug "emanresusername/zsh-plugins", use:nwjs
 zplug "emanresusername/zsh-plugins", use:cowfiles
 
 zplug "marzocchi/zsh-notify", \
