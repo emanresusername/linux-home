@@ -37,7 +37,7 @@ zplug "junegunn/fzf-bin", \
       as:command, \
       rename-to:fzf, \
       on:"BurntSushi/ripgrep"
-export FZF_DEFAULT_COMMAND='rg --files'
+export FZF_DEFAULT_COMMAND='rg --files --hidden'
 zplug "junegunn/fzf", \
       as:command, \
       use:"bin/fzf-tmux", \
