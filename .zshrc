@@ -71,7 +71,8 @@ zplug "stedolan/jq", \
 zplug "fcambus/ansiweather", \
       on:"stedolan/jq"
 
-zplug "zpm-zsh/linuxbrew"
+zplug "emanresusername/linuxbrew-zsh-plugin", \
+      use:"linuxbrew.plugin.zsh"
 
 POWERLEVEL9K_INSTALLATION_PATH=$ZPLUG_REPOS/bhilburn/powerlevel9k
 zplug "bhilburn/powerlevel9k", \
