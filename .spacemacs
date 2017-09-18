@@ -368,6 +368,9 @@ you should place your code here."
   (setq org-export-with-properties t)
 
   (global-company-mode)
+
+  (setq-default js-indent-level 2)
+  (setq-default js2-basic-offset 2)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
