@@ -31,7 +31,7 @@ zplug "BurntSushi/ripgrep", \
       from:gh-r, \
       as:command, \
       rename-to:rg, \
-      at:"0.5.2" # TODO: latest windows release breaks
+      at:"0.6.0" # TODO: latest release breaks sometimes
 
 zplug "junegunn/fzf-bin", \
       from:gh-r, \
