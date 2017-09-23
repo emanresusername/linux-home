@@ -24,6 +24,7 @@ zplug "zeit/hyper", \
       from:gh-r, \
       as:command, \
       use:"*AppImage", \
+      rename-to:"hyper", \
       hook-build:"chmod +x *" # TODO: doesn't trigger on install, have to update
 
 zplug "MichaelAquilina/zsh-emojis"
