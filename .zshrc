@@ -11,7 +11,7 @@ zplug "plugins/emacs", from:oh-my-zsh
 zplug "plugins/gitfast", from:oh-my-zsh
 zplug "plugins/command-not-found", from:oh-my-zsh
 zplug "emanresusername/zsh-plugins", use:electron-chrome
-zplug "emanresusername/zsh-plugins", use:nwjs
+zplug "emanresusername/zsh-plugins", use:chrome-app
 zplug "emanresusername/zsh-plugins", use:cowfiles
 zplug "emanresusername/zsh-plugins", use:tor-browser
 
@@ -79,7 +79,7 @@ zplug "stedolan/jq", \
 zplug "fcambus/ansiweather", \
       on:"stedolan/jq"
 
-zplug "emanresusername/linuxbrew-zsh-plugin", \
+zplug "zpm-zsh/linuxbrew", \
       use:"linuxbrew.plugin.zsh"
 
 POWERLEVEL9K_INSTALLATION_PATH=$ZPLUG_REPOS/bhilburn/powerlevel9k
@@ -116,3 +116,6 @@ PERL5LIB="$HOME/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
 PERL_LOCAL_LIB_ROOT="$HOME/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
 PERL_MB_OPT="--install_base \"$HOME/perl5\""; export PERL_MB_OPT;
 PERL_MM_OPT="INSTALL_BASE=$HOME/perl5"; export PERL_MM_OPT;
+
+export NVM_DIR="$HOME/.nvm"
+. "`brew --prefix`/opt/nvm/nvm.sh"
