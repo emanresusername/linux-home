@@ -20,13 +20,6 @@ zplug "marzocchi/zsh-notify", \
       hook-build:"brew install wmctrl xdotool"
 zstyle ':notify:*' command-complete-timeout 2
 
-zplug "zeit/hyper", \
-      from:gh-r, \
-      as:command, \
-      use:"*AppImage", \
-      rename-to:"hyper", \
-      hook-build:"chmod +x *" # TODO: doesn't trigger on install, have to update
-
 zplug "MichaelAquilina/zsh-emojis"
 
 zplug "wting/autojump", use:"bin/autojump.zsh"
