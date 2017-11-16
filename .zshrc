@@ -24,9 +24,6 @@ zplug "MichaelAquilina/zsh-emojis"
 
 zplug "wting/autojump", use:"bin/autojump.zsh"
 
-zplug "emanresusername/zsh-plugins", \
-      use:youtube-dl-aria2
-
 zplug "BurntSushi/ripgrep", \
       from:gh-r, \
       as:command, \
