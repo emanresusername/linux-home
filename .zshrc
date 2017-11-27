@@ -13,7 +13,6 @@ zplug "plugins/command-not-found", from:oh-my-zsh
 zplug "emanresusername/zsh-plugins", use:electron-chrome
 zplug "emanresusername/zsh-plugins", use:chrome-app
 zplug "emanresusername/zsh-plugins", use:cowfiles
-zplug "emanresusername/zsh-plugins", use:tor-browser
 
 zplug "marzocchi/zsh-notify", \
       use:"notify.plugin.zsh", \
