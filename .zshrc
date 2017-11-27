@@ -26,8 +26,7 @@ zplug "wting/autojump", use:"bin/autojump.zsh"
 zplug "BurntSushi/ripgrep", \
       from:gh-r, \
       as:command, \
-      rename-to:rg, \
-      at:"0.6.0" # TODO: latest release breaks sometimes
+      rename-to:rg
 
 zplug "junegunn/fzf-bin", \
       from:gh-r, \
