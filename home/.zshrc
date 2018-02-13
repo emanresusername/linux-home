@@ -14,8 +14,8 @@ zplug "emanresusername/zsh-plugins", use:electron-chrome
 zplug "emanresusername/zsh-plugins", use:chrome-app
 zplug "emanresusername/zsh-plugins", use:cowfiles
 zplug "emanresusername/zsh-plugins", use:s3cmd
-zplug "emanresusername/zsh-plugins", use:spacemacs, at:homeshick
-zplug "emanresusername/zsh-plugins", use:homeshick, at:homeshick
+zplug "emanresusername/zsh-plugins", use:spacemacs
+zplug "emanresusername/zsh-plugins", use:homeshick
 
 zplug "marzocchi/zsh-notify", \
       use:"notify.plugin.zsh", \
