@@ -115,5 +115,5 @@ for user repo in emanresusername .ammonite \
                  ; do
   homeshick-homeshwell-clone $user $repo $repo
 done
-homeshick clone git@github.com/emanresusername/linux-home.git
+homeshick clone emanresusername/linux-home
 homeshick link
