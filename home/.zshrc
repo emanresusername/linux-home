@@ -13,6 +13,9 @@ zplug "plugins/command-not-found", from:oh-my-zsh
 zplug "emanresusername/zsh-plugins", use:electron-chrome
 zplug "emanresusername/zsh-plugins", use:chrome-app
 zplug "emanresusername/zsh-plugins", use:cowfiles
+zplug "emanresusername/zsh-plugins", use:s3cmd
+zplug "emanresusername/zsh-plugins", use:spacemacs, at:homeshick
+zplug "emanresusername/zsh-plugins", use:homeshick, at:homeshick
 
 zplug "marzocchi/zsh-notify", \
       use:"notify.plugin.zsh", \
@@ -106,3 +109,11 @@ PERL_MB_OPT="--install_base \"$HOME/perl5\""; export PERL_MB_OPT;
 PERL_MM_OPT="INSTALL_BASE=$HOME/perl5"; export PERL_MM_OPT;
 
 . `brew --prefix`/opt/asdf/asdf.sh
+
+for user repo in emanresusername .ammonite \
+                                 emanresusername .sbt \
+                 ; do
+  homeshick-homeshwell-clone $user $repo $repo
+done
+homeshick clone git@github.com/emanresusername/linux-home.git
+homeshick link
