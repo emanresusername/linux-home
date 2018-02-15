@@ -110,10 +110,10 @@ PERL_MM_OPT="INSTALL_BASE=$HOME/perl5"; export PERL_MM_OPT;
 
 . `brew --prefix`/opt/asdf/asdf.sh
 
-for user repo in emanresusername .ammonite \
-                                 emanresusername .sbt \
+for repo in .ammonite \
+                   .sbt \
+                   linux-home \
                  ; do
-  homeshick-homeshwell-clone $user $repo $repo
+  (homeshick cd "$repo") || homeshick "emanresusername/$repo"
 done
-homeshick clone emanresusername/linux-home
 homeshick link
