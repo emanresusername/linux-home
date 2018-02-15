@@ -114,6 +114,6 @@ for repo in .ammonite \
                    .sbt \
                    linux-home \
                  ; do
-  (homeshick cd "$repo") || homeshick "emanresusername/$repo"
+  (homeshick cd "$repo") || homeshick clone "emanresusername/$repo"
 done
 homeshick link
