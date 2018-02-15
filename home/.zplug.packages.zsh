@@ -16,7 +16,8 @@ zplug "lib/history", from:oh-my-zsh
 
 zplug "plugins/zsh_reload", from:oh-my-zsh
 zplug "plugins/gitfast", from:oh-my-zsh
-zplug "plugins/thefuck", from:oh-my-zsh
+zplug "plugins/thefuck", from:oh-my-zsh, \
+      defer:1 # wait for brew PATH to be set
 
 zplug "zsh-users/zsh-autosuggestions"
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
