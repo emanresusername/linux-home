@@ -17,7 +17,7 @@ zplug "lib/history", from:oh-my-zsh
 zplug "plugins/zsh_reload", from:oh-my-zsh
 zplug "plugins/gitfast", from:oh-my-zsh
 zplug "plugins/thefuck", from:oh-my-zsh, \
-      defer:1 # wait for brew PATH to be set
+      on:"emanresusername/linuxbrew-zsh-plugin"
 
 zplug "zsh-users/zsh-autosuggestions"
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
@@ -35,8 +35,7 @@ zplug "zsh-users/zsh-history-substring-search", \
 "
 zplug "emanresusername/linuxbrew-zsh-plugin", \
       use:"linuxbrew.plugin.zsh", \
-      at:termux, \
-      defer:1 # TODO: only needed in termux
+      at:termux
 
 # tmux
 zplug "jreese/zsh-titles"
